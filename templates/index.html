@@ -1,0 +1,63 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ice Breaker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <div class="spinner-container" id="spinner-container" style="display: none;">
+        <i id="loading-spinner" class="fas fa-spinner fa-spin"></i>
+    </div>
+</head>
+<body>
+    <div class="container">
+        <h1>Ice Breaker</h1>
+        <form id="name-form">
+            <input type="text" id="name" name="name" placeholder="Enter name">
+            <button id="magic-button" type="submit">Do Your Magic</button>
+        </form>
+        <div id="result">
+            <img id="profile-pic" src="" alt="Profile Picture" style="display: none; max-width: 100%; height: auto; border-radius: 50%; margin-bottom: 20px;">
+            <h2>Summary</h2>
+            <p id="summary-and-facts"></p>
+            <h2>Interesting Facts</h2>
+            <div id="interests"></div>
+            <h2>Ice Breakers</h2>
+            <div id="ice-breakers"></div>
+            <h2>Topics of Interest</h2>
+            <div id="topics-of-interest"></div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#name-form').on('submit', function (e) {
+                e.preventDefault();
+                $('#spinner-container').show();
+                $.ajax({
+                    url: '/process',
+                    data: $('#name-form').serialize(),
+                    type: 'POST',
+                    success: function (response) {
+                        $('#profile-pic').attr('src', response.picture_url); // Update the profile picture src attribute
+                        $('#profile-pic').show(); // Show the profile picture
+                        $('#summary-and-facts').text(response.summary_and_facts.summary);
+                        $('#interests').html('<ul>' + response.summary_and_facts.facts.map(fact => '<li>' + fact + '</li>').join('') + '</ul>');
+                        $('#ice-breakers').html('<ul>' + response.ice_breakers.ice_breakers.map(ice_breaker => '<li>' + ice_breaker + '</li>').join('') + '</ul>');
+                        $('#topics-of-interest').html('<ul>' + response.interests.ice_breakers.map(topic => '<li>' + topic + '</li>').join('') + '</ul>');
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    },
+                    complete: function () {
+                        $('#spinner-container').hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
