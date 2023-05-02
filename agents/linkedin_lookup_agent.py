@@ -29,5 +29,3 @@ def lookup(name: str) -> str:
     linkedin_username = agent.run(prompt_template.format_prompt(name_of_person=name))
 
     return linkedin_username
-
-
