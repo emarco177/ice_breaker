@@ -32,7 +32,7 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone [https://github.com/emarco177/ice_breaker/blob/main/](https://github.com/emarco177/ice_breaker.git
+  git clone https://github.com/emarco177/ice_breaker.git
 ```
 
 Go to the project directory
