@@ -37,8 +37,26 @@ class CustomSerpAPIWrapper(SerpAPIWrapper):
         return toret
 
 
-def get_profile_url(name: str):
+def get_profile_url(text: str):
     """Searches for Linkedin or twitter Profile Page."""
-    search = CustomSerpAPIWrapper()
-    res = search.run(f"{name}")
-    return res
+    # for debugging, cache past responses
+    mapping = {
+        "https://nz.linkedin.com/in/peter-gu-a6151134":["Peter Yongqi", "LinkedIn"],
+        #'https://twitter.com/petergyang?lang=en':["Peter Yongqi", "Twitter"],
+    }
+    # if all values of the key are the same, return that value
+    for key, value in mapping.items():
+        # if each string in the key is found in text, then return value
+        if all([string in text for string in value]):
+            return key
+    else: 
+        #return the result from SerpAPI
+        search = CustomSerpAPIWrapper()
+        res = search.run(f"{text}")
+        return res
+
+def extract_twitter_username(url: str):
+    """Extracts the twitter username from a twitter url."""
+    # remove the leading https://twitter.com/ and the trailing /
+    # remove any ?lang=xx query parameters
+    return str(url.replace("https://twitter.com/", "").replace("/", "").split("?")[0])

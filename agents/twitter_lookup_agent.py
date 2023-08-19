@@ -1,4 +1,4 @@
-from tools.tools import get_profile_url
+from tools.tools import get_profile_url, extract_twitter_username
 
 from langchain import PromptTemplate
 
@@ -11,12 +11,17 @@ def lookup(name: str) -> str:
     llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
     template = """
        given the name {name_of_person} I want you to find a link to their Twitter profile page, and extract from it their username
-       In Your Final answer only the person's username"""
+       In Your Final answer only give the person's username"""
     tools_for_agent_twitter = [
         Tool(
             name="Crawl Google 4 Twitter profile page",
             func=get_profile_url,
             description="useful for when you need get the Twitter Page URL",
+        ),
+        Tool(
+            name="Extract Twitter username from a Twitter URL",
+            func=extract_twitter_username,
+            description="useful for when you need to extract the username from a Twitter URL",
         ),
     ]
 

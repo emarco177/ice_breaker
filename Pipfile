@@ -12,6 +12,7 @@ install = "*"
 google-search-results = "*"
 tweepy = "*"
 flask = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 

@@ -3,7 +3,7 @@ from ice_breaker import ice_break_with
 
 app = Flask(__name__)
 
-
+# to launch Flash app, from console run: FLASK_APP=app.py flask run
 @app.route("/")
 def index():
     return render_template("index.html")
