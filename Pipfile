@@ -13,6 +13,7 @@ google-search-results = "*"
 tweepy = "*"
 flask = "*"
 beautifulsoup4 = "*"
+tiktoken = "*"
 
 [dev-packages]
 
