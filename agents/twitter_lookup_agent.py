@@ -1,10 +1,13 @@
+from dotenv import load_dotenv
+from langchain_core.prompts import PromptTemplate
+
+load_dotenv()
+from langchain import hub
+from langchain.agents import create_react_agent, AgentExecutor
+from langchain_core.tools import Tool
+from langchain_openai import ChatOpenAI
+
 from tools.tools import get_profile_url
-
-from langchain import PromptTemplate
-
-from langchain.agents import initialize_agent, Tool
-from langchain.agents import AgentType
-from langchain.chat_models import ChatOpenAI
 
 
 def lookup(name: str) -> str:
@@ -20,16 +23,29 @@ def lookup(name: str) -> str:
         ),
     ]
 
-    agent = initialize_agent(
-        tools_for_agent_twitter,
-        llm,
-        agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-        verbose=True,
-    )
+    # agent = initialize_agent(
+    #     tools_for_agent_twitter,
+    #     llm,
+    #     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    #     verbose=True,
+    # )
+
     prompt_template = PromptTemplate(
         input_variables=["name_of_person"], template=template
     )
 
-    twitter_username = agent.run(prompt_template.format_prompt(name_of_person=name))
+    react_prompt = hub.pull("hwchase17/react")
+    agent = create_react_agent(
+        llm=llm, tools=tools_for_agent_twitter, prompt=react_prompt
+    )
+    agent_executor = AgentExecutor(
+        agent=agent, tools=tools_for_agent_twitter, verbose=True
+    )
+
+    result = agent_executor.invoke(
+        input={"input": prompt_template.format_prompt(name_of_person=name)}
+    )
+
+    twitter_username = result["output"]
 
     return twitter_username
