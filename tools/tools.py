@@ -1,4 +1,4 @@
-from langchain.utilities import SerpAPIWrapper
+from langchain_community.utilities import SerpAPIWrapper
 
 
 class CustomSerpAPIWrapper(SerpAPIWrapper):

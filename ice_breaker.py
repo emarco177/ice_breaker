@@ -37,8 +37,8 @@ def ice_break_with(name: str) -> Tuple[Summary, IceBreaker, TopicOfInterest, str
     interests = topics_of_interest_parser.parse(interests)
 
     ice_breaker_chain = get_ice_breaker_chain()
-    ice_breakers = ice_breaker_chain.run(
-        information=linkedin_data, twitter_posts=tweets
+    ice_breakers = ice_breaker_chain.invoke(
+        input={"information": linkedin_data, "twitter_posts": tweets}
     )
     ice_breakers = ice_breaker_parser.parse(ice_breakers)
 

@@ -8,9 +8,9 @@ logger = logging.getLogger("twitter")
 twitter_client = tweepy.Client(
     bearer_token=os.environ["TWITTER_BEARER_TOKEN"],
     consumer_key=os.environ["TWITTER_API_KEY"],
-    consumer_secret=os.environ["TWITTER_API_SECRET"],
+    consumer_secret=os.environ["TWITTER_API_KEY_SECRET"],
     access_token=os.environ["TWITTER_ACCESS_TOKEN"],
-    access_token_secret=os.environ["TWITTER_ACCESS_SECRET"],
+    access_token_secret=os.environ["TWITTER_ACCESS_TOKEN_SECRET"],
 )
 
 
