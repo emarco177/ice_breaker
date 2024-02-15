@@ -30,4 +30,4 @@ class TopicOfInterest(BaseModel):
 
 summary_parser = PydanticOutputParser(pydantic_object=Summary)
 ice_breaker_parser = PydanticOutputParser(pydantic_object=IceBreaker)
-topics_of_interest_parser = PydanticOutputParser(pydantic_object=IceBreaker)
+topics_of_interest_parser = PydanticOutputParser(pydantic_object=TopicOfInterest)
