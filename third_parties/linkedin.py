@@ -9,7 +9,10 @@ def scrape_linkedin_profile(linkedin_profile_url: str):
     header_dic = {"Authorization": f'Bearer {os.environ.get("PROXYCURL_API_KEY")}'}
 
     response = requests.get(
-        api_endpoint, params={"url": linkedin_profile_url}, headers=header_dic
+        api_endpoint,
+        params={"url": linkedin_profile_url},
+        headers=header_dic,
+        timeout=10,
     )
 
     data = response.json()

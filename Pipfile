@@ -15,7 +15,9 @@ flask = "*"
 langchain-openai = "*"
 python-dotenv = "*"
 langchain-community = "*"
-pydantic = "==v1.10.13"
+pydantic = "*"
+langchain-core = "*"
+pylint = "*"
 
 [dev-packages]
 

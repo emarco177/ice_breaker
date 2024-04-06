@@ -1,9 +1,9 @@
 import os
-import logging
-
+from dotenv import load_dotenv
 import tweepy
 
-logger = logging.getLogger("twitter")
+load_dotenv()
+
 
 twitter_client = tweepy.Client(
     bearer_token=os.environ["TWITTER_BEARER_TOKEN"],
@@ -35,4 +35,4 @@ def scrape_user_tweets(username, num_tweets=5):
 
 
 if __name__ == "__main__":
-    print(scrape_user_tweets(username="hwchase17"))
+    print(scrape_user_tweets(username="EdenEmarco177"))

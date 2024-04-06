@@ -1,5 +1,5 @@
 from langchain.chains import LLMChain
-from langchain_core.prompts import PromptTemplate
+from langchain.prompts.prompt import PromptTemplate
 from langchain_openai import ChatOpenAI
 
 from output_parsers import summary_parser, ice_breaker_parser, topics_of_interest_parser
@@ -24,7 +24,7 @@ def get_summary_chain() -> LLMChain:
         },
     )
 
-    return LLMChain(llm=llm, prompt=summary_prompt_template)
+    return summary_prompt_template | llm | summary_parser
 
 
 def get_interests_chain() -> LLMChain:
@@ -42,7 +42,7 @@ def get_interests_chain() -> LLMChain:
         },
     )
 
-    return LLMChain(llm=llm, prompt=interesting_facts_prompt_template)
+    return interesting_facts_prompt_template | llm | topics_of_interest_parser
 
 
 def get_ice_breaker_chain() -> LLMChain:
@@ -60,4 +60,4 @@ def get_ice_breaker_chain() -> LLMChain:
         },
     )
 
-    return LLMChain(llm=llm_creative, prompt=ice_breaker_prompt_template)
+    return ice_breaker_prompt_template | llm | ice_breaker_parser

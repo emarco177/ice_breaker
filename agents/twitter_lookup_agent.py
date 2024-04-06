@@ -1,13 +1,13 @@
-from dotenv import load_dotenv
-from langchain_core.prompts import PromptTemplate
-
-load_dotenv()
-from langchain import hub
-from langchain.agents import create_react_agent, AgentExecutor
+from langchain.prompts.prompt import PromptTemplate
 from langchain_core.tools import Tool
 from langchain_openai import ChatOpenAI
+from langchain import hub
+from langchain.agents import create_react_agent, AgentExecutor
 
-from tools.tools import get_profile_url
+from dotenv import load_dotenv
+from tools.tools import get_profile_url_tavily
+
+load_dotenv()
 
 
 def lookup(name: str) -> str:
@@ -18,17 +18,10 @@ def lookup(name: str) -> str:
     tools_for_agent_twitter = [
         Tool(
             name="Crawl Google 4 Twitter profile page",
-            func=get_profile_url,
+            func=get_profile_url_tavily,
             description="useful for when you need get the Twitter Page URL",
         ),
     ]
-
-    # agent = initialize_agent(
-    #     tools_for_agent_twitter,
-    #     llm,
-    #     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    #     verbose=True,
-    # )
 
     prompt_template = PromptTemplate(
         input_variables=["name_of_person"], template=template

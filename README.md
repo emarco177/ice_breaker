@@ -1,9 +1,10 @@
 
 # ice_breaker
 
-A repository for learning LangChain by building a generative ai application.
+A repository for learning LangChain🦜🔗  by building a generative ai application.
 
-This is a web applicaiton crawling Linkedin & Twitter data about a person an customize an ice breaker with them. 
+This is a web application crawling Linkedin & Twitter data about a person and customizes an ice breaker with them.
+
 
 ![Logo](https://github.com/emarco177/ice_breaker/blob/main/static/banner.jpeg)
 [![udemy](https://img.shields.io/badge/LangChain%20Udemy%20Course-Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?referralCode=D981B8213164A3EA91AC)
@@ -18,7 +19,7 @@ To run this project, you will need to add the following environment variables to
 
 `PROXYCURL_API_KEY`
 
-`SERPAPI_API_KEY`
+`TAVILY_API_KEY`
 
 `TWITTER_API_KEY`
 
