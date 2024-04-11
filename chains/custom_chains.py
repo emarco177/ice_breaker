@@ -1,6 +1,7 @@
 from langchain.chains import LLMChain
-from langchain.prompts.prompt import PromptTemplate
 from langchain_openai import ChatOpenAI
+from langchain.prompts.prompt import PromptTemplate
+
 
 from output_parsers import summary_parser, ice_breaker_parser, topics_of_interest_parser
 

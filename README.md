@@ -6,7 +6,7 @@ A repository for learning LangChain🦜🔗  by building a generative ai applica
 This is a web application crawling Linkedin & Twitter data about a person and customizes an ice breaker with them.
 
 
-![Logo](https://github.com/emarco177/ice_breaker/blob/main/static/banner.jpeg)
+![Logo](https://github.com/emarco177/ice_breaker/blob/main/static/demo.gif)
 [![udemy](https://img.shields.io/badge/LangChain%20Udemy%20Course-Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?referralCode=D981B8213164A3EA91AC)
 
 ## Environment Variables

@@ -6,7 +6,7 @@ from chains.custom_chains import (
     get_interests_chain,
     get_ice_breaker_chain,
 )
-from third_parties.linkedin import scrape_linkedin_profile, scrape_linkedin_profile_mock
+from third_parties.linkedin import scrape_linkedin_profile
 from third_parties.twitter import scrape_user_tweets, scrape_user_tweets_mock
 from output_parsers import (
     Summary,
