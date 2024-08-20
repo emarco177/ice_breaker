@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 
+load_dotenv()
+
 from ice_breaker import ice_break_with
 
-load_dotenv()
 
 app = Flask(__name__)
 
