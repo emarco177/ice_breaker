@@ -7,7 +7,7 @@ from langchain.agents import (
 )
 from langchain_core.tools import Tool
 from langchain_openai import ChatOpenAI
-from langchain.prompts.prompt import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
 from tools.tools import get_profile_url_tavily
 
