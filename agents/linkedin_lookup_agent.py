@@ -17,7 +17,7 @@ load_dotenv()
 def lookup(name: str) -> str:
     llm = ChatOpenAI(
         temperature=0,
-        model_name="gpt-3.5-turbo",
+        model_name="gpt-4o-mini",
         openai_api_key=os.environ["OPENAI_API_KEY"],
     )
     template = """given the full name {name_of_person} I want you to get it me a link to their Linkedin profile page.

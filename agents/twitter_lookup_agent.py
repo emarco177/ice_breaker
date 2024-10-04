@@ -11,10 +11,11 @@ load_dotenv()
 
 
 def lookup(name: str) -> str:
-    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
+    llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
     template = """
        given the name {name_of_person} I want you to find a link to their Twitter profile page, and extract from it their username
-       In Your Final answer only the person's username"""
+       In Your Final answer only the person's username
+       which is extracted from: https://x.com/USERNAME"""
     tools_for_agent_twitter = [
         Tool(
             name="Crawl Google 4 Twitter profile page",
