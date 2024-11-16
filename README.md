@@ -13,7 +13,7 @@ This is a web application crawling Linkedin & Twitter data about a person and cu
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`PYTHONPATH=/{YOUR_PATH_TO_PROJECT}/ice_breaker`
+``
 
 `OPENAI_API_KEY`
 
@@ -28,6 +28,16 @@ To run this project, you will need to add the following environment variables to
 `TWITTER_ACCESS_TOKEN`
 
 `TWITTER_ACCESS_SECRET`
+
+`LANGCHAIN_TRACING_V2`  # Optional, for LangSmith tracing
+
+`LANGCHAIN_API_KEY` # Optional
+
+`LANGCHAIN_PROJECT` # Optional
+
+To run this project, you will need to add the following environment variables to your .env file:
+
+> **Important Note**: If you enable tracing by setting `LANGCHAIN_TRACING_V2=true`, you must have a valid LangSmith API key set in `LANGCHAIN_API_KEY`. Without a valid API key, the application will throw an error. If you don't need tracing, simply remove or comment out these environment variables.
 ## Run Locally
 
 Clone the project
