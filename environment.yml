@@ -1,0 +1,14 @@
+name: ice_breaker
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.10
+- flask
+- tweepy
+- pylint
+- black
+- isort
+- langchain
+- langchain-community
+- langchain-openai
