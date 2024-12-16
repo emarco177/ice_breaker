@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6b729c9515a3a1f64721f41ef0c38f4bcee7a0ffe89770e52046e7b7e73d21af"
+            "sha256": "056004ea0c0aaa18b71f71f136206efbbdb0cc5dfe154c2c43472babe02b6e45"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -389,11 +389,11 @@
         },
         "httpx": {
             "hashes": [
-                "sha256:75e98c5f16b0f35b567856f597f06ff2270a374470a5c2392242528e3e3e42fc",
-                "sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
+                "sha256:7bb2708e112d8fdd7829cd4243970f0c223274051cb35ee80c03301ee29a3df0",
+                "sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==0.28.1"
+            "version": "==0.27.2"
         },
         "httpx-sse": {
             "hashes": [
@@ -534,6 +534,15 @@
             ],
             "markers": "python_version >= '3.9' and python_version < '4.0'",
             "version": "==0.3.25"
+        },
+        "langchain-ollama": {
+            "hashes": [
+                "sha256:033916150cc9c341d72274512b9987a0ebf014cf808237687012fc7af4a81ee3",
+                "sha256:752b112d233a6e079259cb10138a5af836f42d26781cac6d7eb1b1e0d2ae9a0d"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9' and python_version < '4.0'",
+            "version": "==0.2.1"
         },
         "langchain-openai": {
             "hashes": [
@@ -743,6 +752,14 @@
             ],
             "markers": "python_version >= '3.10'",
             "version": "==2.2.0"
+        },
+        "ollama": {
+            "hashes": [
+                "sha256:0f466e845e2205a1cbf5a2fef4640027b90beaa3b06c574426d8b6b17fd6e139",
+                "sha256:e1db064273c739babc2dde9ea84029c4a43415354741b6c50939ddd3dd0f7ffb"
+            ],
+            "markers": "python_version >= '3.8' and python_version < '4.0'",
+            "version": "==0.4.4"
         },
         "openai": {
             "hashes": [

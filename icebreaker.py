@@ -3,6 +3,8 @@ load_dotenv()  # This will load the variables from .env
 import os
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama;
+from langchain_core.output_parsers import StrOutputParser
 
 information = """
 Elon Reeve Musk FRS (/ˈiːlɒn/; born June 28, 1971) is a businessman known for his key roles in the space company SpaceX and the automotive company Tesla, Inc. His other involvements include ownership of X Corp., the company that operates the social media platform X (formerly Twitter), and his role in the founding of the Boring Company, xAI, Neuralink, and OpenAI. Musk is the wealthiest individual in the world; as of December 2024, Forbes estimates his net worth to be US$432 billion. [2] Due to his considerable influence over politics, media, and industry, Musk has been described as an oligarch.[3]
@@ -19,7 +21,7 @@ By early 2024, Musk became active in American politics as a vocal and financial 
 if __name__ == "__main__":
     print("Hello Langchain")
     print(os.getenv('OPENAI_API_KEY'))
-
+    print("stage 2")
     summary_template = """
          given the information {information} about a person from I want you to create:
          1. a short summary
@@ -30,10 +32,12 @@ if __name__ == "__main__":
     #contains input variables and template
     #template = text before we inject variables 
 
-    llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo")
+    #llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo")
     #temperature = how creative the model is, 0 = least creative
+    # llm = ChatOllama(model="llama3.2")
+    llm = ChatOllama(model='mistral')
 
-    chain = summary_prompt_template | llm
+    chain = summary_prompt_template | llm | StrOutputParser()
     #pipe operator comes drom langchain expresssion language
     #making an api call to openai
 
