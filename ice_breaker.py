@@ -8,7 +8,12 @@ from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent
 
 def ice_break_with(name: str) -> str:
     linkedin_username = linkedin_lookup_agent(name=name)
-    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_username)
+    # This will only work if you provide nubela PROXYCURL_API_KEY
+    # linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_username)
+    
+    # Use the mock=True flag you want to use gist 
+    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_username, mock=True)
+
 
     summary_template = """
     given the Linkedin information {information} about a person I want you to create:
