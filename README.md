@@ -15,3 +15,5 @@ pipenv install langchainhub
 pipenv install python-dotenv
 
 pipenv install langchain-ollama
+
+pip install flask : install flask library for web server

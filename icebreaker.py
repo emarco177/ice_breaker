@@ -6,11 +6,11 @@ from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama;
 from langchain_core.output_parsers import StrOutputParser
 
-from output_parsers import summary_parser;
+from output_parsers import summary_parser, Summary;
 from third_parties.linkedin import scrape_linkedin_profile
 from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent;
 
-def ice_break_with(name: str) -> str:
+def ice_break_with(name: str) -> tuple[Summary, str]:
     linkedin_url = linkedin_lookup_agent(name=name) #get linkedin url
     linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=False) #get linkedin data
 
@@ -42,8 +42,10 @@ def ice_break_with(name: str) -> str:
     #langhain expression model (syntax)
 
     linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=False)
-    res = chain.invoke(input={"information": linkedin_data})
+    res: Summary = chain.invoke(input={"information": linkedin_data})
     print(res)
+
+    return res, linkedin_data.get("profile_pic_url")
 
 
 
