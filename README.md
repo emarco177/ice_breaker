@@ -1,6 +1,11 @@
 # Ice Breaker
 pipenv shell 
 
+vscode:
+cmd + shift + p
+select python interpreter
+search for the icebreaker on with the letters mentioned from the pipenv shell output
+
 langchain downloads
 pipenv install langchain    
 pipenv install langchain-openai 

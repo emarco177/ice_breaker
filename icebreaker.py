@@ -7,13 +7,12 @@ from langchain_ollama import ChatOllama;
 from langchain_core.output_parsers import StrOutputParser
 
 from third_parties.linkedin import scrape_linkedin_profile
+from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent;
 
+def ice_break_with(name: str) -> str:
+    linkedin_url = linkedin_lookup_agent(name=name) #get linkedin url
+    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=False) #get linkedin data
 
-
-if __name__ == "__main__":
-    print("Hello Langchain")
-    print(os.getenv('OPENAI_API_KEY'))
-    print("stage 4")
     summary_template = """
          given the linkedin information {information} about a person from I want you to create:
          1. a short summary
@@ -33,6 +32,13 @@ if __name__ == "__main__":
     #pipe operator comes drom langchain expresssion language
     #making an api call to openai
 
-    linkedin_data = scrape_linkedin_profile(linkedin_profile_url="https://www.linkedin.com/in/adam-punnoose/", mock=False)
+    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=False)
     res = chain.invoke(input={"information": linkedin_data})
     print(res)
+
+
+
+if __name__ == "__main__":
+    load_dotenv()
+    print(os.getenv('OPENAI_API_KEY'))
+    print(ice_break_with("Eden Marco Udemy"))
