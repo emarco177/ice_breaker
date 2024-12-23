@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ice Breaker</title>
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chgibb/css-spinners@2.2.1/css/spinner/three-quarters.min.css">
+    </head>
+    <body>
+        <header>
+            <form id="name-form" style="margin: 0 auto">
+                <h1>Ice Breaker</h1>
+                <input type="text" name="name" placeholder="Enter name">
+                <button id="magic-button" type="submit" class="center">Do Your Magic</button>
+            </form>
+        </header>
+        <div id="spinner" style="text-align: center; display: none">
+            <span class="three-quarters-loader" style="width: 100px; height: 100px; border-radius: 50%; border-width: 12px;"></span>
+        </div>
+        <main id="result" style="display: none">
+            <div style="text-align: center">
+                <img id="profile-pic" src="" alt="Profile Picture" style="width: 300px; max-width: 100%; height: auto; border-radius: 50%; margin-bottom: 20px;">
+            </div>
+            <div>
+                <h2>Summary</h2>
+                <p id="summary"></p>
+            </div>
+            <div>
+                <h2>Interesting Facts</h2>
+                <div id="facts"></div>
+            </div>
+            <div>
+                <h2>Ice Breakers</h2>
+                <div id="ice-breakers"></div>
+            </div>
+            <div>
+                <h2>Topics of Interest</h2>
+                <div id="topics-of-interest"></div>
+            </div>
+        </main>
+
+        <script>
+            const form = document.getElementById("name-form");
+            const spinner = document.getElementById("spinner");
+            const result = document.getElementById("result");
+
+            form.addEventListener("submit", (ev) => {
+                ev.preventDefault();
+
+                result.style.display = "none";
+                spinner.style.display = "";
+
+                const formData = new FormData(form);
+
+                fetch("/process", {method: "POST", body: formData})
+                    .then(response => {
+                        if (response.ok) return response.json();
+                        throw new Error("POST request failed");
+                    })
+                    .then(data => {
+                        document.getElementById("profile-pic").src = data.picture_url;
+                        document.getElementById("summary").textContent = data.summary_and_facts.summary;
+                        createHtmlList(document.getElementById("facts"), data.summary_and_facts.facts);
+                        createHtmlList(document.getElementById("ice-breakers"), data.ice_breakers.ice_breakers);
+                        createHtmlList(document.getElementById("topics-of-interest"), data.interests.topics_of_interest);
+
+                        spinner.style.display = "none";
+                        result.style.display = "";
+                    })
+            });
+
+            function createHtmlList(element, items)
+            {
+                const ul = document.createElement("ul");
+
+                items.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    ul.appendChild(li);
+                })
+
+                element.innerHTML = "";
+                element.appendChild(ul);
+            }
+        </script>
+    </body>
+</html>
