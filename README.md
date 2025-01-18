@@ -17,7 +17,7 @@ To run this project, you will need to add the following environment variables to
 
 `OPENAI_API_KEY`
 
-`PROXYCURL_API_KEY`
+`SCRAPIN_API_KEY`
 
 `TAVILY_API_KEY`
 
