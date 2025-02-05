@@ -11,8 +11,9 @@ black = "*"
 isort = "*"
 langchain-openai = "*"
 langchain-community = "*"
-langchain = "*"
 langchain-ollama = "*"
+langchain = "*"
+langchainhub = "*"
 
 [dev-packages]
 
