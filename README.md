@@ -63,7 +63,7 @@ Install dependencies
 Start the flask server
 
 ```bash
-  pipenv run app.py
+  pipenv run python app.py
 ```
 
 
