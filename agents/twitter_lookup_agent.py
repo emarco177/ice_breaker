@@ -18,7 +18,7 @@ def lookup(name: str) -> str:
        which is extracted from: https://x.com/USERNAME"""
     tools_for_agent_twitter = [
         Tool(
-            name="Crawl Google 4 Twitter profile page",
+            name="Crawl Google 4 Twitter profile page sentence",
             func=get_profile_url_tavily,
             description="useful for when you need get the Twitter Page URL",
         ),
