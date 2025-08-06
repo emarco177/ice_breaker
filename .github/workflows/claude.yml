@@ -35,7 +35,15 @@ jobs:
         uses: anthropics/claude-code-action@beta
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
+          mcp_config: |
+            {
+              "mcpServers": {
+                "context7": {
+                  "url": "https://mcp.context7.com/mcp"
+                }
+              }
+            }
+          # Optional: Add custom instructions for Claude to customize its behavior for your project
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
             actions: read
@@ -52,11 +60,9 @@ jobs:
           # Optional: Allow Claude to run specific commands
           # allowed_tools: "Bash(npm install),Bash(npm run build),Bash(npm run test:*),Bash(npm run lint:*)"
           
-          # Optional: Add custom instructions for Claude to customize its behavior for your project
-          # custom_instructions: |
-          #   Follow our coding standards
-          #   Ensure all new code has tests
-          #   Use TypeScript for new files
+          custom_instructions: |
+            Whenever you need access to a package documentation, use the context7 MCP server.
+            It will get you the correct documentation for the package with latest version.
           
           # Optional: Custom environment variables for Claude
           # claude_env: |
