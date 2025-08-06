@@ -13,6 +13,7 @@ langchain-openai = "*"
 langchain-community = "*"
 langchain-ollama = "*"
 langchain = "*"
+langchain-tavily = "*"
 
 [dev-packages]
 
