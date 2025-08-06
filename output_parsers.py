@@ -1,6 +1,5 @@
 from typing import List, Dict, Any
 
-from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 
 
@@ -26,8 +25,3 @@ class TopicOfInterest(BaseModel):
 
     def to_dict(self) -> Dict[str, Any]:
         return {"topics_of_interest": self.topics_of_interest}
-
-
-summary_parser = PydanticOutputParser(pydantic_object=Summary)
-ice_breaker_parser = PydanticOutputParser(pydantic_object=IceBreaker)
-topics_of_interest_parser = PydanticOutputParser(pydantic_object=TopicOfInterest)
