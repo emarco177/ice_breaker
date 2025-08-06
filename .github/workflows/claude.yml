@@ -39,10 +39,12 @@ jobs:
             {
               "mcpServers": {
                 "context7": {
-                  "url": "https://mcp.context7.com/mcp"
+                  "command": "npx",
+                  "args": ["-y", "@upstash/context7-mcp"],
                 }
               }
             }
+
           # Optional: Add custom instructions for Claude to customize its behavior for your project
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
@@ -58,11 +60,11 @@ jobs:
           # assignee_trigger: "claude-bot"
           
           # Optional: Allow Claude to run specific commands
-          # allowed_tools: "Bash(npm install),Bash(npm run build),Bash(npm run test:*),Bash(npm run lint:*)"
-          
+          allowed_tools: "mcp__context7__resolve-library-id, mcp__context7__get-library-docs"
           custom_instructions: |
             Whenever you need access to a package documentation, use the context7 MCP server.
             It will get you the correct documentation for the package with latest version.
+            Every time want to write something with LangChain, use the context7 MCP server.
           
           # Optional: Custom environment variables for Claude
           # claude_env: |
