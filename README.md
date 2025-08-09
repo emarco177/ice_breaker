@@ -9,7 +9,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-2.0+-red)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Udemy Course](https://img.shields.io/badge/LangChain%20Udemy%20Course-Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?referralCode=JJULY-2025)
+[![Udemy Course](https://img.shields.io/badge/LangChain%20Udemy%20Course-Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?referralCode=AUGUST-2025)
 
 ## 🎯 Overview
 
