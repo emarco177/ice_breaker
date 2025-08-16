@@ -23,7 +23,7 @@ This course takes you through building 7 real-world AI agent projects, from simp
 | 👋 Hello World Agent | Branch (`project/hello-world`) | Your first AI agent - basic structure and LLM integration |
 | 💻 Code Interpreter | Branch (`project/code-interpreter`) | AI-powered code execution and analysis |
 | 🧠 ReAct Under the Hood | Branch (`project/react-under-hood`) | Understanding reasoning and acting patterns in AI agents |
-| 🔍 [Ice Breaker](https://github.com/emarco177/ice_breaker) | External Repo | Social media profile analyzer |
+| 🔍 [Ice Breaker](https://github.com/emarco177/IceBreaker) | External Repo | Social media profile analyzer |
 | 📝 Medium Analyzer | External Repo | Content analysis and insights generator |
 | 📚 [Documentation Helper](https://github.com/emarco177/documentation-helper) | External Repo | Intelligent documentation assistant |
 | 🪞 [Reflection Agent](https://github.com/emarco177/langgraph-course/tree/project/reflection-agent) | External Repo | Self-improving agent with reflection and critique capabilities |
