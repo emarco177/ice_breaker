@@ -1,201 +1,158 @@
-# 🧊 Ice Breaker
+# LangChain- Develop AI Agents with LangChain & LangGraph 🦜🔗
 
-**An intelligent ice breaker generator powered by LangChain and social media intelligence**
+**Learn LangChain and LangGraph by building real world AI Agents (Python, Latest Version 0.3.0+)**
 
-![Ice Breaker Demo](https://github.com/emarco177/ice_breaker/blob/main/static/demo.gif)
+This course is designed to teach you how to QUICKLY harness the power of the LangChain library for LLM applications. Build 3 end-to-end working LangChain based generative AI applications with no fluff, no toy examples - just real projects using real APIs and real-world skills.
 
-[![LangChain](https://img.shields.io/badge/LangChain-🦜🔗-brightgreen)](https://langchain.com/)
-[![Tavily](https://img.shields.io/badge/Tavily-🔍-orange)](https://app.tavily.com/home?utm_campaign=eden_marco&utm_medium=socials&utm_source=linkedin)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-2.0+-red)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Udemy Course](https://img.shields.io/badge/LangChain%20Udemy%20Course-Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?referralCode=AUGUST-2025)
+![LangChain Logo](/static/LangChain-logo.svg)
+![LangGraph Logo](/static/LangGraph%20wordmark%20-%20dark.svg)
 
-## 🎯 Overview
+[![Twitter Follow](https://img.shields.io/twitter/follow/EdenMarco177?style=social)](https://twitter.com/EdenMarco177)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-**Ice Breaker** is a sophisticated AI-powered web application that creates personalized ice breakers by analyzing LinkedIn and Twitter profiles. This project serves as a comprehensive learning tool for mastering LangChain while building a practical generative AI application that combines social media intelligence with natural language generation.
-
-### ✨ Key Features
-
-**AI Pipeline Flow:**
-
-1. 🔍 **Profile Discovery**: Intelligent lookup and discovery of LinkedIn and Twitter profiles
-2. 🌐 **Data Extraction**: Advanced web scraping of professional and social media data
-3. 🧠 **AI Analysis**: Deep analysis of personality, interests, and professional background
-4. ✍️ **Ice Breaker Generation**: Context-aware creation of personalized conversation starters
-5. 🎨 **Smart Formatting**: Professional presentation of generated content
-6. 💬 **Interactive Interface**: User-friendly web interface powered by Flask
-7. 🚀 **Real-time Processing**: Fast end-to-end pipeline from profile input to ice breaker output
+[![udemy](https://img.shields.io/badge/LangChain%20Udemy%20Course%20Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langchain/?couponCode=AUGUST-2025)
 
 
-_Watch Ice Breaker analyze social profiles and generate personalized conversation starters_
 
-## 🛠️ Tech Stack
+## 💡 What You'll Build 
 
-| Component | Technology | Description |
-|-----------|------------|-------------|
-| 🖥️ **Frontend** | Flask | Web application framework |
-| 🧠 **AI Framework** | LangChain 🦜🔗 | Orchestrates the AI pipeline |
-| 🔍 **LinkedIn Data** | Scrapin.io | Professional profile scraping |
-| 🐦 **Twitter Data** | Twitter API | Social media content analysis |
-| 🌐 **Web Search** | Tavily | Enhanced profile discovery |
-| 🤖 **LLM** | OpenAI GPT | Powers the conversation generation |
-| 📊 **Monitoring** | LangSmith | Optional tracing and debugging |
-| 🐍 **Backend** | Python 3.8+ | Core application logic |
+This course takes you through building 7 real-world AI agent projects, from simple hello-world applications to advanced agentic systems:
 
-## 🚀 Quick Start
+| Project | Type | Description |
+|---------|------|-------------|
+| 👋 Hello World Agent | Branch (`project/hello-world`) | Your first AI agent - basic structure and LLM integration |
+| 💻 Code Interpreter | Branch (`project/code-interpreter`) | AI-powered code execution and analysis |
+| 🧠 ReAct Under the Hood | Branch (`project/react-under-hood`) | Understanding reasoning and acting patterns in AI agents |
+| 🔍 [Ice Breaker](https://github.com/emarco177/ice_breaker) | External Repo | Social media profile analyzer |
+| 📝 Medium Analyzer | External Repo | Content analysis and insights generator |
+| 📚 [Documentation Helper](https://github.com/emarco177/documentation-helper) | External Repo | Intelligent documentation assistant |
+| 🪞 [Reflection Agent](https://github.com/emarco177/langgraph-course/tree/project/reflection-agent) | External Repo | Self-improving agent with reflection and critique capabilities |
+| 🔄 [Reflexion Agent](https://github.com/emarco177/langgraph-course/tree/project/reflexion-agent) | External Repo | Advanced self-correcting agent using reflexion techniques |
+| 🤖 [Agentic RAG](https://github.com/emarco177/langgraph-course/tree/project/agentic-rag) | External Repo | Advanced retrieval-augmented generation system |
 
-### Prerequisites
+## 📚 Course Highlights 
 
-* Python 3.8 or higher
-* OpenAI API key
-* Scrapin.io API key
-* Twitter API credentials
-* Tavily API key
+- **7 Complete Projects** - From beginner to advanced implementations including Ice Breaker, Documentation Helper, and Code Interpreter
+- **Real-World Applications** - Build agents that solve actual problems with live APIs
+- **Modern Tech Stack** - LangChain v0.3+, LangGraph, Pinecone, FAISS, Streamlit
+- **Practical Skills** - Learn RAG, vector databases, prompt engineering, and agent workflows
+- **Interactive Learning** - Follow commits chronologically for step-by-step learning
 
-### Installation
+## 🤔 Learning Path 
+
+### Phase 1: Foundations
+1. **Hello World Chain** - Basic agent structure and LLM integration
+2. **Code Interpreter** - Tool calling and code execution capabilities
+
+### Phase 2: Real-World Applications
+3. **Ice Breaker** - Data collection and social media integration
+4. **Documentation Helper** - RAG implementation and knowledge management
+
+### Phase 3: Advanced Concepts
+5. **Blog Analyzer** - Multi-step reasoning and content analysis
+6. **Agentic RAG** - Self-correcting agents with memory and planning
+
+## ▶️ Getting Started 
+
+### 🛠️ Prerequisites 
+- **This is not a beginner course** - Basic software engineering concepts needed
+- Familiarity with: git, Python, environment variables, classes, testing and debugging
+- Python 3.10+
+- Any Python package manager (uv, poetry, pipenv) - but NOT conda!
+- Access to an LLM (can be open source via Ollama, or cloud providers like OpenAI, Anthropic, Gemini)
+- No Machine Learning experience needed
+
+### ⚙️ Setup Instructions 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/emarco177/ice_breaker.git
-   cd ice_breaker
+   git clone https://github.com/emarco177/langchain-course
+   cd langchain-course
    ```
-
-2. **Set up environment variables**
+2. **Choose your learning path**
    
-   Create a `.env` file in the root directory with your API keys (see [Environment Variables](#-environment-variables) section for details).
-
-3. **Install dependencies**
+   **For branch-based projects:**
    ```bash
-   pipenv install
+   # Start with Hello World
+   git checkout project/hello-world
+   uv sync
+   uv run python main.py
+   
+   # Progress to Code Interpreter
+   git checkout project/code-interpreter
+   uv sync
+   uv run python main.py
+   ```
+   
+   **For external repository projects:**
+   ```bash
+   # Clone specific project repositories
+   git clone https://github.com/emarco177/ice_breaker
+   cd ice_breaker
+   # Follow project-specific setup instructions
    ```
 
-4. **Start the application**
-   ```bash
-   pipenv run app.py
-   ```
+3. **Follow the commits**
+   - Each commit represents a lesson or feature implementation
+   - Use `git log --oneline` to see the learning progression
+   - Checkout previous commits to understand the development process
 
-5. **Open your browser** and navigate to `http://localhost:5000`
-
-## 🧪 Testing
-
-Run the test suite to ensure everything is working correctly:
-
-```bash
-pipenv run pytest .
-```
-
-## 💰 API Costs & Credits
-
-> **📋 Note**: This project uses paid API services for optimal functionality:
-> 
-> - **[Scrapin.io](https://app.scrapin.io/auth/register)** 💼 - LinkedIn data scraping  
->   *[Sign up for API access](https://app.scrapin.io/auth/register)*
-> 
-> - **[Tavily](https://app.tavily.com/home?utm_campaign=eden_marco&utm_medium=socials&utm_source=linkedin)** 🌐 - Enhanced web search and profile discovery  
->   *[Sign up for Tavily API access](https://app.tavily.com/home?utm_campaign=eden_marco&utm_medium=socials&utm_source=linkedin)*
-> 
-> - **Twitter API** 🐦 - Social media content access  
->   *Paid service for accessing Twitter data*
-
-> **⚠️ Important**: If you enable LangSmith tracing (`LANGCHAIN_TRACING_V2=true`), ensure you have a valid `LANGCHAIN_API_KEY`. Without it, the application will throw an error. If you don't need tracing, simply omit these variables.
-
-## 📁 Project Structure
+## 📁 Branches Structure 
 
 ```
-ice_breaker/
-├── agents/                    # AI agents for profile lookup
-│   ├── linkedin_lookup_agent.py
-│   └── twitter_lookup_agent.py
-├── chains/                    # LangChain custom chains
-│   └── custom_chains.py
-├── third_parties/            # External API integrations
-│   ├── linkedin.py
-│   └── twitter.py
-├── tools/                    # Utility tools and functions
-│   └── tools.py
-├── templates/                # Flask HTML templates
-│   └── index.html
-├── static/                   # Static assets
-│   ├── banner.jpeg
-│   └── demo.gif
-├── app.py                    # Flask application entry point
-├── ice_breaker.py           # Core ice breaker logic
-├── output_parsers.py        # Response formatting utilities
-└── requirements files       # Pipfile, Pipfile.lock
+langchain-course/
+├── project/hello-world/          # Basic Chain 
+├── project/code-interpreter/     # Slim Code execution 
+└── project/react-under-hood/     # ReAct Algorithm Deep Dive
 ```
+**External Projects:**
+- [Ice Breaker](https://github.com/emarco177/ice_breaker) - Social media profile analyzer
+- [Medium Analyzer](https://github.com/emarco177/blog-analyzer) - Content analysis and insights generator
+- [Documentation Helper](https://github.com/emarco177/documentation-helper) - AI documentation assistant
+- [Reflection Agent](https://github.com/emarco177/langgraph-course/tree/project/reflection-agent) - Self-improving agent with reflection and critique capabilities
+- [Reflexion Agent](https://github.com/emarco177/langgraph-course/tree/project/reflexion-agent) - Advanced self-correcting agent using reflexion techniques
+- [Agentic RAG](https://github.com/emarco177/langgraph-course/tree/project/agentic-rag) - Advanced retrieval-augmented generation system
 
-## 🔧 Environment Variables
 
-Create a `.env` file in the root directory:
+## 📚 Learning Objectives 
 
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-SCRAPIN_API_KEY=your_scrapin_api_key_here
-TAVILY_API_KEY=your_tavily_api_key_here
+By the end of this course, you'll be able to:
 
-# Optional: Twitter scraping (if you want Twitter data)
-TWITTER_API_KEY=your_twitter_api_key_here
-TWITTER_API_SECRET=your_twitter_api_secret_here
-TWITTER_ACCESS_TOKEN=your_twitter_access_token_here
-TWITTER_ACCESS_SECRET=your_twitter_access_secret_here
+- Build AI agents from scratch using modern frameworks
+- Implement tool calling and external API integrations
+- Create RAG systems with vector databases
+- Design multi-step reasoning workflows
+- Deploy agents to production environments
+- Handle error correction and self-improvement in agents
+- Optimize agent performance and cost efficiency
 
-# Optional: Enable LangSmith tracing
-LANGCHAIN_TRACING_V2=true
-LANGCHAIN_API_KEY=your_langsmith_api_key_here
-LANGCHAIN_PROJECT=ice_breaker
-```
 
-> **⚠️ Important Note**: If you enable tracing by setting `LANGCHAIN_TRACING_V2=true`, you must have a valid LangSmith API key set in `LANGCHAIN_API_KEY`. Without a valid API key, the application will throw an error. If you don't need tracing, simply remove or comment out these environment variables.
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `OPENAI_API_KEY` | Your OpenAI API key for LLM access | ✅ |
-| `SCRAPIN_API_KEY` | Scrapin.io API key for LinkedIn scraping | ✅ |
-| `TAVILY_API_KEY` | Tavily API key for enhanced web search | ✅ |
-| `TWITTER_API_KEY` | Twitter API key for social data access (optional) | ⚪ |
-| `TWITTER_API_SECRET` | Twitter API secret (optional) | ⚪ |
-| `TWITTER_ACCESS_TOKEN` | Twitter access token (optional) | ⚪ |
-| `TWITTER_ACCESS_SECRET` | Twitter access token secret (optional) | ⚪ |
-| `LANGCHAIN_TRACING_V2` | Enable LangSmith tracing (optional) | ⚪ |
-| `LANGCHAIN_API_KEY` | LangSmith API key (required if tracing enabled) | ⚪ |
-| `LANGCHAIN_PROJECT` | LangSmith project name (optional) | ⚪ |
 
-## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+## 🙏 Acknowledgements 
 
-## 📚 Learning Resources
-
-This project is designed as a comprehensive learning tool for understanding:
-
-* 🦜 **LangChain Framework** - Agent orchestration and chain composition
-* 🔗 **API Integration** - Working with multiple external services
-* 🧠 **AI Application Architecture** - Building production-ready AI systems
-* 🌐 **Web Scraping** - Ethical data collection from social platforms
-* 💬 **Natural Language Generation** - Context-aware content creation
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Big thanks to the **LangChain / LangGraph** team and their excellent [documentation and tutorials](https://langchain-ai.github.io/langgraph/tutorials/introduction/) that make this course possible.
 
 ## 🌟 Support
 
 If you find this project helpful, please consider:
-
-* ⭐ Starring the repository
-* 🐛 Reporting issues
-* 💡 Contributing improvements
-* 📢 Sharing with others
-* 🎓 Taking the [LangChain Course](https://www.udemy.com/course/langchain/?referralCode=JJULY-2025)
+- ⭐ Starring the repository
+- 🐛 Reporting issues
+- 💡 Contributing improvements
+- 📢 Sharing with others
 
 ---
 
+<div align="center">
+
 ### 🔗 Connect with Me
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.udemy.com/course/langchain/?referralCode=JJULY)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.udemy.com/course/langchain/?referralCode=D981B8213164A3EA91AC)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eden-marco/)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://www.udemy.com/user/eden-marco/)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/EdenEmarco177)
 
 **Built with ❤️ by Eden Marco**
+
+</div>
 
